@@ -1,0 +1,17 @@
+extractImg.py
+goes through each file and extracts images
+from what i've observed, textures follow a header that describes their height and width,
+so this script goes line by line looking for a known header and then creates the image out of them
+images have pallettes of 16 colors that are located after the image
+
+python3 extractImg.py source dest
+run the script on all files and directories in source location and save all images to dest location
+
+extractObj.py
+goes through each file and extracts 3d models into .obj files
+like textures, models follow a header that describes how many vertices there are.
+the model's vertex positions, normals, and uv coordinates are then described.
+the faces are formed between consecutive vertices, i.e. (1,2,3),(4,5,6)... etc.
+
+python3 extractObj.py source dest
+run the script on all files and directories in source location and save all models to dest location
