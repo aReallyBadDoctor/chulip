@@ -28,14 +28,17 @@ def valid(i):
         return True
     return False
 
-source = sys.argv[1]
-dest = sys.argv[2]
+#source = sys.argv[1]
+#dest = sys.argv[2]
+
+source = "../isoFiles/"
+dest = "../models/"
 
 if __name__ == "__main__":
     for D in os.walk(source):
         for file in D[2]:
             path = D[0]+"\\"+file
-            save_dir = dest + path[path.index("Chulip (USA)")+13:path.rfind(".")]+"\\"
+            save_dir = dest + path[path.index("isoFiles")+8:path.rfind(".")]+"\\"
             print(path)
             sz = os.stat(path).st_size
             FILE = open(path, "rb")
